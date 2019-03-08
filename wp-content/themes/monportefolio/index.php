@@ -114,14 +114,47 @@
 			// Start the Loop.
 			while ( have_posts() ) :
 				the_post();
+				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+				the_content();
+			the_excerpt();
+			the_date();
 
-				/*
-				 * Include the post format-specific template for the content. If you want to
-				 * use this in a child theme, then include a file called content-___.php
-				 * (where ___ is the post format) and that will be used instead.
-				 */
-				get_template_part( 'content', get_post_format() );
+?>
+						<div class="item clear">
+							<div class="date">22 march</div>
+							<div class="item-header">
+								<h3>Sed gravida neque mi, sed rutrum nibh ullamcorper quis.</h3>
+							</div>
+							<div class="content">
+								<p>Maecenas ac velit condimentum, condimentum ante at, sodales justo. Vivamus suscipit nunc ut condimentum feugiat. Praesent imperdiet sollicitudin pulvinar. Pellentesque interdum sem a ligula scelerisque bibendum. Donec aliquam mattis neque quis pretium. Pellentesque felis leo, consequat nec aliquet vitae, tempor nec nisi. Curabitur ultrices leo non ligula venenatis, a viverra urna pulvinar. Morbi auctor semper tellus sit amet gravida. Curabitur accumsan convallis aliquet. Proin hendrerit eros quis ultricies feugiat. 
+	Vestibulum scelerisque enim rutrum nisi blandit, eget commodo nunc ultrices. Vivamus  </p>
+							</div>
+							<div class="columns-row clear">
+								<div class="columns-col columns-col-6">
+									<ul class="list-type list-type-splash">
+										<li><i></i>Suspendisse vel quam leo nam leo orci, tincidunt</li>
+										<li><i></i>Vestibulum ac mi eleifend, rhoncus lectus ut</li>
+										<li><i></i>Nullam ut massa vehicula volutpat enim et vehicula</li>
+									</ul>
+								</div>
+								<div class="columns-col columns-col-6">
+									<ul class="list-type list-type-splash">
+										<li><i></i>Suspendisse vel quam leo nam leo orci, tincidunt</li>
+										<li><i></i>Vestibulum ac mi eleifend, rhoncus lectus ut</li>
+										<li><i></i>Nullam ut massa vehicula volutpat enim et vehicula</li>
+									</ul>
+								</div>
+							</div>
+							<div class="post-info clear">
+								<span><i class="fa fa-calendar"></i> March 22, 2016</span>
+								<span><i class="fa fa-edit"></i> Admin</span>
+								<span><i class="fa fa-comment"></i> 2 Coments</span>
+								<span><i class="fa fa-bookmark"></i> Audio</span>
+								<a class="button" href="blog-single-post.html">/ READ MORE</a>
+							</div>
+						</div>
 
+<?php
 				endwhile;
 			// Previous/next post navigation.
 			twentyfourteen_paging_nav();
