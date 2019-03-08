@@ -33,7 +33,7 @@ return apply_filters(
 		),
 		'email'     => array(
 			'name'  => 'email',
-			'label' => __( 'Email', 'scriptless-social-sharing' ),
+			'label' => __( 'Courriel', 'scriptless-social-sharing' ), // Traduit en fr par Nadine Giasson St-Amand nadineducegep@gmail.com 2019/03/08
 			'order' => 0,
 		),
 		'reddit'    => array(
