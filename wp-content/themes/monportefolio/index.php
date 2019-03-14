@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 	<!--styles -->
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/jquery.fancybox.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/jquery.owl.carousel.css">
@@ -94,16 +95,16 @@
 			
 
 ?>
-						<div class="item clear">
+						<div class="item clear oeuvre">
 							<div class="date"><?php the_date();?></div>
-							<div class="item-header">
+							<div class="item-header oeuvre-titre">
 								<h3><?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?></h3>
 							</div>
-							<div class="content">
+							<div class="content oeuvre-description">
 								<p><?php the_content(); ?></p>
 							</div>
-							<div class="post-info clear">
-								<span><i class="fa fa-calendar"></i> <?php the_date();?></span>
+							<div class="post-info oeuvre-meta clear">
+								<span class="oeuvre-date"><i class="fa fa-calendar"></i><?php the_date();?>2019</span>
 								<span><i class="fa fa-edit"></i> Admin</span>
 								<span><i class="fa fa-comment"></i> 2 Coments</span>
 								<span><i class="fa fa-bookmark"></i> Audio</span>

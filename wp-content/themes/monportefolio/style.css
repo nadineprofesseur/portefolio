@@ -12,3 +12,27 @@ Text Domain: monportefolio
 
 Test de template
 */
+
+#content .oeuvre
+{
+	
+	
+}
+
+#content .oeuvre .oeuvre-titre
+{
+	
+}
+
+#content .oeuvre .oeuvre-description
+{
+	
+}
+
+.oeuvre-date
+{
+	background-color:yellow;
+	display:inline-block;
+	padding-right:20px;
+	
+}
