@@ -482,7 +482,8 @@ Vestibulum a libero eu eros pulvinar congue dictum in nunc. Duis eget velit quis
 				<div id="tag_cloud-2" class="widget widget_tag_cloud">
 					<div class="widget-title">Tags</div>
 					<div class="tagcloud">
-						<ul>
+					<?php wp_tag_cloud( $args ); ?>
+						<!--ul>
 							<li><a href="#">Daily</a></li>
 							<li><a href="#">Design</a></li>
 							<li><a href="#">Ilustration</a></li>
@@ -495,7 +496,7 @@ Vestibulum a libero eu eros pulvinar congue dictum in nunc. Duis eget velit quis
 							<li><a href="#">Sounds</a></li>
 							<li><a href="#">Tv</a></li>
 							<li><a href="#">Video</a></li>
-						</ul>
+						</ul-->
 					</div>
 				</div>
 				<!-- tags widget -->
