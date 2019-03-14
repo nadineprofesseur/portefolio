@@ -29,36 +29,9 @@
 							<i class="fa fa-bars"></i>
 						</a>
 						<ul class="clear">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="aboutus.html">About</a></li>
-							<li><a href="team.html">Team</a></li>
-							<li>
-								<a href="portfolio-four-columns.html">Portfolio</a>
-								<ul>
-									<li><a href="portfolio-four-columns.html"><span>Four Columns</span></a></li>
-									<li><a href="portfolio-tree-columns.html"><span>Three Columns</span></a></li>
-									<li><a href="portfolio-two-columns.html"><span>Two Columns</span></a></li>
-									<li><a href="portfolio-single-item.html"><span>Single Item</span></a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="blog-with-sidebar.html">Blog</a>
-								<ul>
-									<li><a href="blog-with-sidebar.html"><span>Blog With Sidebar</span></a></li>
-									<li><a href="blog-fullwidth.html"><span>Blog Full Width</span></a></li>
-									<li><a href="blog-single-post.html"><span>Single Post</span></a></li>
-								</ul>
-							</li>
-							<li><a href="shortcodes.html">Shortcodes</a></li>
-							<li class="left">
-								<a href="shop-product-list.html">Shop</a>
-								<ul>
-									<li><a href="shop-cart.html"><span>Shop Cart</span></a></li>
-									<li><a href="shop-product-list.html"><span>Shop Product List</span></a></li>
-									<li><a href="shop-single-product.html"><span>Shop Single Product</span></a></li>
-								</ul>
-							</li>
-							<li class="last"><a href="contact.html">Contact</a></li>
+							<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Accueil</a></li>
+							<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">&Agrave; propos de moi</a></li>
+							<li class="last"><a href="<?php echo esc_url( home_url( '/' ) ); ?>contact/">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -139,8 +112,8 @@
 					<form method="get" class="search-form" action="http://wp.com/">
 						<label>
 							<span class="screen-reader-text">Search for:</span>
-							<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:"></label>
-						<input type="submit" class="search-submit" value="Search">
+							<input type="search" class="search-field" placeholder="Chercher …" value="" name="s" title="Search for:"></label>
+						<input type="submit" class="search-submit" value="Chercher">
 					</form>
 				</div>
 				<!-- widget search -->
