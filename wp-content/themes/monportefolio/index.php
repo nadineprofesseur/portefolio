@@ -96,6 +96,7 @@
 
 ?>
 						<div class="item clear oeuvre">
+
 							<div class="date"><?php the_date();?></div>
 							<div class="item-header oeuvre-titre">
 								<h3><?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?></h3>
@@ -103,8 +104,9 @@
 							<div class="content oeuvre-description">
 								<p><?php the_content(); ?></p>
 							</div>
-							<div class="post-info oeuvre-meta clear">
-								<span class="oeuvre-date"><i class="fa fa-calendar"></i><?php the_date();?>2019</span>
+						<?php $champsMeta = get_post_custom(); print_r($custom_fields);?>
+						<div class="post-info oeuvre-meta clear">
+								<span class="oeuvre-date"><i class="fa fa-calendar"></i><?php echo $champsMeta['date'][0];?></span>
 								<span><i class="fa fa-edit"></i> Admin</span>
 								<span><i class="fa fa-comment"></i> 2 Coments</span>
 								<span><i class="fa fa-bookmark"></i> Audio</span>
