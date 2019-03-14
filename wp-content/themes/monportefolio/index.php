@@ -482,7 +482,9 @@ Vestibulum a libero eu eros pulvinar congue dictum in nunc. Duis eget velit quis
 				<div id="tag_cloud-2" class="widget widget_tag_cloud">
 					<div class="widget-title">Tags</div>
 					<div class="tagcloud">
-					<?php wp_tag_cloud( $args ); ?>
+						<ul>
+							<li><?php wp_tag_cloud( 'separator=</li><li>' ); ?></li>
+						</ul>
 						<!--ul>
 							<li><a href="#">Daily</a></li>
 							<li><a href="#">Design</a></li>
