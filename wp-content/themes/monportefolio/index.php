@@ -78,75 +78,32 @@
 				<div class="grid-col grid-col-9">
 					<div id="content" role="main">
 						<div class="title">
-							<span class="main-title">BLOG</span>
-							<span class="slash-icon">/<i class="fa fa-angle-double-right"></i></span><h5>SEE WHAT IS NEW</h5>
-						</div>
-						<div class="item clear">
-							<div class="media-block">
-								<div class="picture">
-									<div class="hover-effect"></div>
-									<div class="link-cont">
-										<a href="blog-single-post.html" class="cws-slide-left fa fa-share-alt"></a>
-										<a href="images/pair_large.jpg" class="fancy fa fa-search"></a>
-										<a href="blog-single-post.html" class="cws-slide-right fa fa-heart"></a>
-									</div>
-									<img src="images/pair_large.jpg" alt>
-								</div>
-							</div>
-							<div class="date">22 march</div>
-							<div class="item-header">
-								<h3>Suspendisse interdum tortor augue, in tempus urna ultricies</h3>
-							</div>
-							<div class="content">
-								<p>Vivamus fringilla eu nisl non laoreet.Maecenas ac velit condimentum, condimentum ante at, sodales justo. Vivamus suscipit nunc ut condimentum feugiat. Praesent imperdiet sollicitudin pulvinar. Pellentesque interdum sem a ligula scelerisque bibendum. Donec aliquam mattis neque quis pretium. Pellentesque felis leo, consequat nec aliquet vitae, tempor nec nisi. Curabitur ultrices leo non ligula venenatis, a viverra urna pulvinar. Morbi auctor semper tellus sit amet gravida. Curabitur accumsan convallis aliquet. Proin hendrerit eros quis ultricies feugiat. </p>
-							</div>
-							<div class="post-info clear">
-								<span><i class="fa fa-calendar"></i> March 22, 2016</span>
-								<span><i class="fa fa-edit"></i> Admin</span>
-								<span><i class="fa fa-comment"></i> 2 Coments</span>
-								<span><i class="fa fa-bookmark"></i> Audio</span>
-								<a class="button" href="blog-single-post.html">/ READ MORE</a>
-							</div>
-						</div>
-							
+							<span class="main-title">PORTEFOLIO</span>
+							<span class="slash-icon">/<i class="fa fa-angle-double-right"></i></span><h5>VOIR MES REALISATIONS</h5>
+						</div>							
 <?php
 		if ( have_posts() ) :
 			// Start the Loop.
 			while ( have_posts() ) :
+				
 				the_post();
-				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
-				the_content();
-			the_excerpt();
-			the_date();
+				
+			
+				
+			//the_excerpt();
+			
 
 ?>
 						<div class="item clear">
-							<div class="date">22 march</div>
+							<div class="date"><?php the_date();?></div>
 							<div class="item-header">
-								<h3>Sed gravida neque mi, sed rutrum nibh ullamcorper quis.</h3>
+								<h3><?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?></h3>
 							</div>
 							<div class="content">
-								<p>Maecenas ac velit condimentum, condimentum ante at, sodales justo. Vivamus suscipit nunc ut condimentum feugiat. Praesent imperdiet sollicitudin pulvinar. Pellentesque interdum sem a ligula scelerisque bibendum. Donec aliquam mattis neque quis pretium. Pellentesque felis leo, consequat nec aliquet vitae, tempor nec nisi. Curabitur ultrices leo non ligula venenatis, a viverra urna pulvinar. Morbi auctor semper tellus sit amet gravida. Curabitur accumsan convallis aliquet. Proin hendrerit eros quis ultricies feugiat. 
-	Vestibulum scelerisque enim rutrum nisi blandit, eget commodo nunc ultrices. Vivamus  </p>
-							</div>
-							<div class="columns-row clear">
-								<div class="columns-col columns-col-6">
-									<ul class="list-type list-type-splash">
-										<li><i></i>Suspendisse vel quam leo nam leo orci, tincidunt</li>
-										<li><i></i>Vestibulum ac mi eleifend, rhoncus lectus ut</li>
-										<li><i></i>Nullam ut massa vehicula volutpat enim et vehicula</li>
-									</ul>
-								</div>
-								<div class="columns-col columns-col-6">
-									<ul class="list-type list-type-splash">
-										<li><i></i>Suspendisse vel quam leo nam leo orci, tincidunt</li>
-										<li><i></i>Vestibulum ac mi eleifend, rhoncus lectus ut</li>
-										<li><i></i>Nullam ut massa vehicula volutpat enim et vehicula</li>
-									</ul>
-								</div>
+								<p><?php the_content(); ?></p>
 							</div>
 							<div class="post-info clear">
-								<span><i class="fa fa-calendar"></i> March 22, 2016</span>
+								<span><i class="fa fa-calendar"></i> <?php the_date();?></span>
 								<span><i class="fa fa-edit"></i> Admin</span>
 								<span><i class="fa fa-comment"></i> 2 Coments</span>
 								<span><i class="fa fa-bookmark"></i> Audio</span>
@@ -157,7 +114,6 @@
 <?php
 				endwhile;
 			// Previous/next post navigation.
-			twentyfourteen_paging_nav();
 
 			else :
 				// If no content, include the "No posts found" template.
@@ -297,7 +253,7 @@
 					<div class="textwidget">
 						<div class="follow-icon">
 							<a href="#"><div class="contact-round blue-follow-icon"><i class="fa fa-twitter"></i></div></a>
-							<a href="#"><div class="contact-round hot-follow-icon"><i class="fa fa-rss"></i></div></a>
+							<a target="_blank" href="<?php echo esc_url( home_url( '/' ) ); ?>feed/"><div class="contact-round hot-follow-icon"><i class="fa fa-rss" title="RSS"></i></div></a>
 							<a href="#"><div class="contact-round blue-follow-icon"><i class="fa fa-skype"></i></div></a>
 							<a href="#"><div class="contact-round red-follow-icon"><i class="fa fa-youtube"></i></div></a>
 							<a href="#"><div class="contact-round blue-follow-icon"><i class="fa fa-facebook"></i></div></a>
