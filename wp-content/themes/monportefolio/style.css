@@ -29,7 +29,7 @@ Test de template
 	
 }
 
-.oeuvre-date
+#content .oeuvre .oeuvre-date
 {
 	background-color:yellow;
 	display:inline-block;
