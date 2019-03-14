@@ -107,11 +107,16 @@
 						<?php $champsMeta = get_post_custom(); print_r($custom_fields);?>
 						<div class="post-info oeuvre-meta clear">
 								<span class="oeuvre-date"><i class="fa fa-calendar"></i><?php echo $champsMeta['date'][0];?></span>
-								<span><i class="fa fa-edit"></i> Admin</span>
-								<span><i class="fa fa-comment"></i> 2 Coments</span>
-								<span><i class="fa fa-bookmark"></i> Audio</span>
+								<span class="oeuvre-auteur"><i class="fa fa-edit"></i><?php echo $champsMeta['auteur'][0];?></span>
+								<span class="oeuvre-interoperabilite"><i class="fa fa-comment"></i><?php echo $champsMeta['interoperabilite'][0];?></span>
+								<span class="oeuvre-technologie"><i class="fa fa-bookmark"></i><?php echo $champsMeta['technologie'][0];?></span>
 								<a class="button" href="blog-single-post.html">/ READ MORE</a>
 							</div>
+							<!--div class="media-block">
+								<div class="video-player">
+									<iframe src="https://www.youtube.com/embed/tQ-WuUHNIz8"></iframe>
+								</div>
+							</div-->
 						</div>
 
 <?php
@@ -124,117 +129,6 @@
 
 			endif;
 			?>							
-						<!-- blog item video -->
-						<div class="item clear">
-							<div class="media-block">
-								<div class="video-player">
-									<iframe src="https://www.youtube.com/embed/tQ-WuUHNIz8"></iframe>
-								</div>
-							</div>
-							<div class="date">22 march</div>
-							<div class="item-header">
-								<h3>Sed gravida neque mi, sed rutrum nibh ullamcorper quis.</h3>
-							</div>
-							<div class="content">
-								<p>Maecenas ac velit condimentum, condimentum ante at, sodales justo. Vivamus suscipit nunc ut condimentum feugiat. Praesent imperdiet sollicitudin pulvinar. Pellentesque interdum sem a ligula scelerisque bibendum. Donec aliquam mattis neque quis pretium. Pellentesque felis leo, consequat nec aliquet vitae, tempor nec nisi. Curabitur ultrices leo non ligula venenatis, a viverra urna pulvinar. Morbi auctor semper tellus sit amet gravida. Curabitur accumsan convallis aliquet. Proin hendrerit eros quis ultricies feugiat. 
-	Vestibulum scelerisque enim rutrum nisi blandit, eget commodo nunc ultrices. Vivamus  </p>
-							</div>
-							<div class="post-info clear">
-								<span><i class="fa fa-calendar"></i> March 22, 2016</span>
-								<span><i class="fa fa-edit"></i> Admin</span>
-								<span><i class="fa fa-comment"></i> 2 Coments</span>
-								<span><i class="fa fa-bookmark"></i> Audio</span>
-								<a class="button" href="blog-single-post.html">/ READ MORE</a>
-							</div>
-						</div>
-						<!-- blog item video -->
-						<!-- blog item blockquote -->
-						<div class="item clear">
-							<div class="date">22 march</div>
-							<div class="content">
-								<div class="quote clear">
-									<blockquote><h3>Vestibulum a libero eu eros pulvinar congue dictum in nunc.</h3><p>Praesent imperdiet sollicitudin pulvinar. Pellentesque interdum sem a ligula scelerisque bibendum. Donec aliquam mattis neque quis pretium. Pellentesque felis leo, consequat nec aliquet vitae, tempor nec nisi. Curabitur ultrices leo non ligula venenatis, a viverra urna pulvinar. Morbi auctor semper tellus sit amet gravida. Curabitur accumsan convallis aliquet. Vivamus placerat ultricies neque. Fusce eleifend ante quam, vitae porta dui scelerisque at. Cras ac risus ac magna iaculis scelerisque eget id purus. Aenean tortor sem, ultrices egestas porta blandit, suscipit vel eros. Phasellus pulvinar dolor</p><div class="quote-author">Scott Sancherzh</div></blockquote>
-									<!-- <span class="author">Scott Sancherzh</span> -->
-								</div>
-							</div>
-							<div class="post-info clear">
-								<span><i class="fa fa-calendar"></i> March 22, 2016</span>
-								<span><i class="fa fa-edit"></i> Admin</span>
-								<span><i class="fa fa-comment"></i> 2 Coments</span>
-								<span><i class="fa fa-bookmark"></i> Audio</span>
-								<a class="button" href="blog-single-post.html">/ READ MORE</a>
-							</div>
-						</div>
-						<!-- blog item blockquote -->
-						<!-- blog item list -->
-						<div class="item clear">
-							<div class="date">22 march</div>
-							<div class="item-header">
-								<h3>Sed gravida neque mi, sed rutrum nibh ullamcorper quis.</h3>
-							</div>
-							<div class="content">
-								<p>Maecenas ac velit condimentum, condimentum ante at, sodales justo. Vivamus suscipit nunc ut condimentum feugiat. Praesent imperdiet sollicitudin pulvinar. Pellentesque interdum sem a ligula scelerisque bibendum. Donec aliquam mattis neque quis pretium. Pellentesque felis leo, consequat nec aliquet vitae, tempor nec nisi. Curabitur ultrices leo non ligula venenatis, a viverra urna pulvinar. Morbi auctor semper tellus sit amet gravida. Curabitur accumsan convallis aliquet. Proin hendrerit eros quis ultricies feugiat. 
-	Vestibulum scelerisque enim rutrum nisi blandit, eget commodo nunc ultrices. Vivamus  </p>
-							</div>
-							<div class="columns-row clear">
-								<div class="columns-col columns-col-6">
-									<ul class="list-type list-type-splash">
-										<li><i></i>Suspendisse vel quam leo nam leo orci, tincidunt</li>
-										<li><i></i>Vestibulum ac mi eleifend, rhoncus lectus ut</li>
-										<li><i></i>Nullam ut massa vehicula volutpat enim et vehicula</li>
-									</ul>
-								</div>
-								<div class="columns-col columns-col-6">
-									<ul class="list-type list-type-splash">
-										<li><i></i>Suspendisse vel quam leo nam leo orci, tincidunt</li>
-										<li><i></i>Vestibulum ac mi eleifend, rhoncus lectus ut</li>
-										<li><i></i>Nullam ut massa vehicula volutpat enim et vehicula</li>
-									</ul>
-								</div>
-							</div>
-							<div class="post-info clear">
-								<span><i class="fa fa-calendar"></i> March 22, 2016</span>
-								<span><i class="fa fa-edit"></i> Admin</span>
-								<span><i class="fa fa-comment"></i> 2 Coments</span>
-								<span><i class="fa fa-bookmark"></i> Audio</span>
-								<a class="button" href="blog-single-post.html">/ READ MORE</a>
-							</div>
-						</div>
-						<!-- blog item list -->
-						<!-- blog item music -->
-						<div class="item clear">
-							<div class="media-block splash">
-								<div class="picture">
-									<div class="hover-effect"></div>
-									<div class="link-cont">
-										<a href="#" class="cws-slide-left fancy fa fa-headphones"></a>
-										<a href="images/blog-withsidebar-1.jpg" class="fancy fa fa-search"></a>
-										<a href="#" class="cws-slide-right fa fa-heart"></a>
-									</div>
-									<div class="music">
-										<img src="images/blog-withsidebar-1.jpg" alt>
-										<audio controls>
-											<source src="audio/audio.mp3">
-										</audio>
-									</div>
-								</div>	
-							</div>
-							<div class="date">22 march</div>
-							<div class="item-header">
-								<h3>Sed gravida neque mi, sed rutrum nibh ullamcorper quis.</h3>
-							</div>
-							<div class="content">
-								<p>Maecenas ac velit condimentum, condimentum ante at, sodales justo. Vivamus suscipit nunc ut condimentum feugiat. Praesent imperdiet sollicitudin pulvinar. Pellentesque interdum sem a ligula scelerisque bibendum. Donec aliquam mattis neque quis pretium. Pellentesque felis leo, consequat nec aliquet vitae, tempor nec nisi. Curabitur ultrices leo non ligula venenatis, a viverra urna pulvinar. Morbi auctor semper tellus sit amet gravida. Curabitur accumsan convallis aliquet. Proin hendrerit eros quis ultricies feugiat. 
-	Vestibulum scelerisque enim rutrum nisi blandit, eget commodo nunc ultrices. Vivamus  </p>
-							</div>
-							<div class="post-info clear">
-								<span><i class="fa fa-calendar"></i> March 22, 2016</span>
-								<span><i class="fa fa-edit"></i> Admin</span>
-								<span><i class="fa fa-comment"></i> 2 Coments</span>
-								<span><i class="fa fa-bookmark"></i> Audio</span>
-								<a class="button" href="blog-single-post.html">/ READ MORE</a>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
