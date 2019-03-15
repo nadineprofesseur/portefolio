@@ -1,3 +1,6 @@
+		</div>
+	</div>
+	<!--/ page content -->
 	<!-- subscribe -->
 	<div class="subscribe">
 		<div class="grid-row clear">

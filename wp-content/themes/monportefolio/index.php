@@ -16,15 +16,7 @@
 
 get_header(); ?>
 
-	<div class="top-bg">
-		
-    	<img src="img/splash-top.png" class="splash-top" alt>
-		<div class="page-title zoomIn animated">blog</div>
-	</div>
 
-	<!-- page content -->
-	<div class="page-content">
-		<div class="grid-row clear">
 			<div class="grid-col-row">
 				<div class="grid-col grid-col-9">
 					<div id="content" role="main">
@@ -83,19 +75,8 @@ get_header(); ?>
 				</div>
 			</div>
 			
+<?php 
 
-			
-			
-			<?php get_sidebar(); ?>
-			
-			
-			
-			
-			
-		</div>
-	</div>
-	<!--/ page content -->
-
-<?php
 get_sidebar();
+			
 get_footer();

@@ -39,3 +39,11 @@
 		</div>
 	</header>
 	<!--/ page header  -->
+	<div class="top-bg">
+		
+    	<img src="img/splash-top.png" class="splash-top" alt>
+		<div class="page-title zoomIn animated">blog</div>
+	</div>
+	<!-- page content -->
+	<div class="page-content">
+		<div class="grid-row clear">
