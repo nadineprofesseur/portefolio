@@ -28,13 +28,16 @@
 				<div id="categories" class="widget widget_categories">
 					<div class="widget-title">Categories</div>
 					<ul>
-						<li class="cat-item cat-item-1 current-cat"><a href="#">Another Category</a> (1) </li>
-						<li class="cat-item cat-item-1 current-cat"><a href="#">Blogroll</a> (7) </li>
-						<li class="cat-item cat-item-1 current-cat"><a href="#">Community</a> (1) </li>
-						<li class="cat-item cat-item-1 current-cat"><a href="#">Daily</a> (2) </li>
-						<li class="cat-item cat-item-1 current-cat"><a href="#">Graphics</a> (2) </li>
-						<li class="cat-item cat-item-1 current-cat"><a href="#">Journal</a> (1) </li>
-						<li class="cat-item cat-item-1 current-cat"><a href="#">Photography</a> (1) </li>
+					<?php 
+					
+						$categories = get_categories(); //print_r($categories);
+						foreach($categories as $categorie)
+						{
+						?>
+						<li class="cat-item cat-item-1 current-cat"><a href="http://localhost/portefolio/<?=$categorie->slug;?>"><?=$categorie->name;?></a> (<?=$categorie->count;?>) </li>							
+						<?php
+						}
+					?>
 					</ul>
 				</div>
 				<!-- categories widget -->
@@ -204,12 +207,13 @@ Vestibulum a libero eu eros pulvinar congue dictum in nunc. Duis eget velit quis
 				<div id="archives" class="widget widget_archive">
 					<div class="widget-title">Archives</div>
 					<ul>
-						<li><a href="http://wp.com/?m=201612">July</a></li>
-						<li><a href="http://wp.com/?m=201612">August</a></li>
-						<li><a href="http://wp.com/?m=201612">September</a></li>
-						<li><a href="http://wp.com/?m=201612">October</a></li>
-						<li><a href="http://wp.com/?m=201612">November</a></li>
-						<li><a href="http://wp.com/?m=201612">December</a></li>
+						<?php 
+						//get_archives_link( $url, $text, $format = 'html', $before = '', $after = '' )
+						// https://developer.wordpress.org/reference/functions/get_archives/
+						$args = compact('type', 'limit', 'format', 'before', 'after', 'show_post_count');
+						$archives = wp_get_archives($args); //print_r($archives);
+						?>
+						<!--li><a href="http://wp.com/?m=201612">July</a></li-->
 					</ul>
 				</div>
 				<!-- archives widget -->
@@ -225,10 +229,9 @@ Vestibulum a libero eu eros pulvinar congue dictum in nunc. Duis eget velit quis
 				<div id="meta" class="widget widget_meta">
 					<div class="widget-title">Meta</div>
 					<ul>
-						<!--li><a href="#">Log out</a></li-->
-						<li><a href="#">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
-						<li><a href="#">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
-						<li><a href="#" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+						<li><a target="_blank" href="<?php echo esc_url( home_url( '/' ) ); ?>feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+						<li><a target="_blank" href="<?php echo esc_url( home_url( '/' ) ); ?>comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+						<li><a target="_blank" href="http://wordpress.org" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
 					</ul>
 				</div>
 				<!-- meta widget -->
