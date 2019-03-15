@@ -17,4 +17,4 @@ function monportefolio_widgets_init() {
 	);
 
 }
-add_action( 'widgets_init', 'monportefolio_widgets_init' );
+//add_action( 'widgets_init', 'monportefolio_widgets_init' );
