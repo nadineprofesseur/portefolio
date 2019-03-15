@@ -11,8 +11,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php twentyfourteen_post_thumbnail(); ?>
 
+	<?php twentyfourteen_post_thumbnail(); ?>
 	<header class="entry-header">
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
 		<div class="entry-meta">
@@ -28,7 +28,8 @@
 			endif;
 			?>
 
-		<div class="entry-meta">
+		<div class="entry-meta"> 
+
 			<?php
 			if ( 'post' == get_post_type() ) {
 				twentyfourteen_posted_on();
@@ -36,12 +37,20 @@
 
 			if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
 				?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment', 'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>
+			<!--span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment', 'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span-->
 				<?php
 				endif;
 
-				edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' );
+				//edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' );
 			?>
+			<hr/>
+				<?php $champsMeta = get_post_custom(); //print_r($custom_fields);?>
+				<div>Projet réalisé : <span class="oeuvre-date"><?php echo $champsMeta['date'][0];?></span></div>
+				<div>Auteurs : <span class="oeuvre-auteur"><?php echo $champsMeta['auteur'][0];?></span></div>
+				<div>Accessibilité : <span class="oeuvre-interoperabilite"><?php echo $champsMeta['interoperabilite'][0];?></span></div>
+				<div>Techno : <span class="oeuvre-technologie"><?php echo $champsMeta['technologie'][0];?></span></div>
+			<hr/>
+
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
