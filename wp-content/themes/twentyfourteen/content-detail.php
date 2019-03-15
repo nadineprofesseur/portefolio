@@ -43,8 +43,13 @@
 
 				//edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' );
 			?>
+			<hr/>
 				<?php $champsMeta = get_post_custom(); //print_r($custom_fields);?>
-				Projet réalisé : <span class="oeuvre-date"><?php echo $champsMeta['date'][0];?></span>
+				<div>Projet réalisé : <span class="oeuvre-date"><?php echo $champsMeta['date'][0];?></span></div>
+				<div>Auteurs : <span class="oeuvre-auteur"><?php echo $champsMeta['auteur'][0];?></span></div>
+				<div>Accessibilité : <span class="oeuvre-interoperabilite"><?php echo $champsMeta['interoperabilite'][0];?></span></div>
+				<div>Techno : <span class="oeuvre-technologie"><?php echo $champsMeta['technologie'][0];?></span></div>
+			<hr/>
 
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
